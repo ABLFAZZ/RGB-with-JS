@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="bg()" class="bg">Change bg color</button>
+    <script>
+
+        let backColor=document.querySelector(".bg");
+        let bodyy = document.querySelector("body");
+
+        
+        function bg(){
+            let ranNum =Math.floor(Math.random()*255);
+            let ranNum2 =Math.floor(Math.random()*255);
+            let ranNum3 =Math.floor(Math.random()*255);
+
+
+            let symbol = ","
+            
+
+            let redGreenBlue="rgb"+"("+ ranNum + symbol + ranNum2 + symbol +ranNum3 +")";
+
+            console.log(redGreenBlue);
+            
+
+            bodyy.style.backgroundColor=redGreenBlue;
+
+
+
+            
+
+
+
+        }
+
+
+
+        
+
+
+    </script>
+</body>
+</html>
