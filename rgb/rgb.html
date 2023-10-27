@@ -9,11 +9,56 @@
         body{
             transition: 1s;
         }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mid{
+            height: 300px;
+            width: 300px;
+            border: 10px solid #ffffff;
+            border-radius: 10px;
+            position: relative;
+           
+        }
+        .bg{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 0;
+            background-color: black;
+            color: white;
+            font-size: 25px;
+            letter-spacing: 1px;
+            border: none;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+
     </style>
 </head>
-<body>
-    <button onclick="bg()" class="bg">Change bg color</button>
+<body onload=" bg()">
+    <div class="container">
+
+        <div class="mid">
+
+            <h1></h1>
+            
+            
+            <button onclick="bg()" class="bg">Change bg color</button>
+        </div>
+    </div>
     <script>
+
+        let mid = document.querySelector(".mid")
+        let head = document.querySelector("h1");
+
 
         let backColor=document.querySelector(".bg");
         let bodyy = document.querySelector("body");
@@ -31,16 +76,13 @@
             let redGreenBlue="rgb"+"("+ ranNum + symbol + ranNum2 + symbol +ranNum3 +")";
 
             console.log(redGreenBlue);
-            
+
 
             bodyy.style.backgroundColor=redGreenBlue;
+            head.innerText=redGreenBlue;
 
-
-
+            navigator.clipboard.writeText(redGreenBlue)
             
-
-
-
         }
 
 
@@ -51,3 +93,11 @@
     </script>
 </body>
 </html>
+
+
+
+        }
+
+
+
+      
